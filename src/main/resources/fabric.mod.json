@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "blockfish",
+	"version": "${version}",
+	"name": "blockfish",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"TreeRodent"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/blockfish/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.treerodent.blockfish.Blockfish"
+		],
+		"client": [
+			"net.treerodent.blockfish.BlockfishClient"
+		],
+		"fabric-datagen": [
+			"net.treerodent.blockfish.BlockfishDataGenerator"
+		]
+	},
+	"mixins": [
+		"blockfish.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
