@@ -2,6 +2,8 @@ package net.treerodent.blockfish;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.treerodent.blockfish.registry.ModBlocks;
+import net.treerodent.blockfish.registry.ModItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -13,6 +15,8 @@ public class Blockfish implements ModInitializer {
 	@Override
 	public void onInitialize() {
 
-		LOGGER.info("Hello Fabric world!");
+		ModItems.registerModItems();
+		ModBlocks.registerModBlocks();
+
 	}
 }
