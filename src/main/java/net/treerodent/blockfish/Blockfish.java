@@ -2,6 +2,9 @@ package net.treerodent.blockfish;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.treerodent.blockfish.entity.ModEntities;
+import net.treerodent.blockfish.entity.custom.FlockfishEntity;
 import net.treerodent.blockfish.registry.ModBlocks;
 import net.treerodent.blockfish.registry.ModItems;
 import org.slf4j.Logger;
@@ -17,6 +20,9 @@ public class Blockfish implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+        ModEntities.registerModEntities();
+
+        FabricDefaultAttributeRegistry.register(ModEntities.FLOCKFISH, FlockfishEntity.createFlockfishAttributes());
 
 	}
 }

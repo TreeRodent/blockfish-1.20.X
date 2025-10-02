@@ -1,6 +1,18 @@
 {
   "variants": {
-    "": {
+    "facing=east": {
+      "model": "blockfish:block/blockfish",
+      "y": 180
+    },
+    "facing=north": {
+      "model": "blockfish:block/blockfish",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "blockfish:block/blockfish",
+      "y": 270
+    },
+    "facing=west": {
       "model": "blockfish:block/blockfish"
     }
   }

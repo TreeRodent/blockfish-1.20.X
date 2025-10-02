@@ -5,15 +5,13 @@ import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.entity.EntityType;
 import net.minecraft.fluid.Fluids;
-import net.minecraft.item.EntityBucketItem;
-import net.minecraft.item.FoodComponent;
-import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.*;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.SoundEvents;
 import net.minecraft.util.Identifier;
 import net.treerodent.blockfish.Blockfish;
+import net.treerodent.blockfish.entity.ModEntities;
 
 public class ModItems {
 
@@ -29,7 +27,7 @@ public class ModItems {
 
     public static final Item FLOCKFISH_BUCKET = registerItem(
             "flockfish_bucket",
-            new EntityBucketItem(EntityType.CHICKEN, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new FabricItemSettings().maxCount(1)));
+            new EntityBucketItem(ModEntities.FLOCKFISH, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new FabricItemSettings().maxCount(1)));
 
     public static final Item RAW_FLOCKFISH = registerItem(
             "raw_flockfish",
@@ -39,6 +37,10 @@ public class ModItems {
             "cooked_flockfish",
             new Item(new FabricItemSettings().food(cooked_flockfish_food_component)));
 
+    public static final Item FLOCKFISH_SPAWN_EGG = registerItem(
+            "flockfish_spawn_egg",
+            new SpawnEggItem(ModEntities.FLOCKFISH, 0xf492c4, 0xf9b4d7, new FabricItemSettings())
+    );
 
 
 
@@ -55,6 +57,10 @@ public class ModItems {
         entries.add(ModBlocks.BLOCKFISH);
     }
 
+    private static void addItemsToSpawnEggsTab(FabricItemGroupEntries entries) {
+        entries.add(ModItems.FLOCKFISH_SPAWN_EGG);
+    }
+
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registries.ITEM, new Identifier(Blockfish.MOD_ID, name), item);
     }
@@ -65,5 +71,6 @@ public class ModItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsTab);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::addItemsToFoodAndDrinkTab);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(ModItems::addItemsToFunctionalBlocksTab);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(ModItems::addItemsToSpawnEggsTab);
     }
 }

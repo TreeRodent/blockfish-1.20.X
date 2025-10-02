@@ -9,18 +9,27 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
+import net.minecraft.util.BlockRotation;
+import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.treerodent.blockfish.Blockfish;
 
 public class ModBlocks {
 
-    public static final Block BLOCKFISH = registerBlock("blockfish",
-            new FallingBlock(FabricBlockSettings.create()
-                    .mapColor(MapColor.PINK)
-                    .strength(0.1F, 0.6F)
+//    public static final Block BLOCKFISH = registerBlock("blockfish",
+//            new FallingBlock(FabricBlockSettings.create()
+//                    .mapColor(MapColor.PINK)
+//                    .strength(0.1F, 0.6F)
+//                    .sounds(BlockSoundGroup.SLIME)
+//                    .nonOpaque()
+//            ));
+
+    public static final Block BLOCKFISH = registerBlock("blockfish", new BlockfishBlock(
+            FabricBlockSettings.copyOf(Blocks.COBBLESTONE)
+                    .hardness(0)
                     .sounds(BlockSoundGroup.SLIME)
-                    .nonOpaque()
-            ));
+                    .mapColor(DyeColor.PINK)
+    ));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
