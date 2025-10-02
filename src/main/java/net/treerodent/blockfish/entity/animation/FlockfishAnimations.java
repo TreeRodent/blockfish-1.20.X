@@ -5,7 +5,7 @@ import net.minecraft.client.render.entity.animation.AnimationHelper;
 import net.minecraft.client.render.entity.animation.Keyframe;
 import net.minecraft.client.render.entity.animation.Transformation;
 
-public class ModAnimations {
+public class FlockfishAnimations {
 
     public static final Animation IDLE = Animation.Builder.create(1.4583433f).looping()
             .addBoneAnimation("back",

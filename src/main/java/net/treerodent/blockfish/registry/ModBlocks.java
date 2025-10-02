@@ -9,10 +9,10 @@ import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
-import net.minecraft.util.BlockRotation;
 import net.minecraft.util.DyeColor;
 import net.minecraft.util.Identifier;
 import net.treerodent.blockfish.Blockfish;
+import net.treerodent.blockfish.block.BlockfishBlock;
 
 public class ModBlocks {
 
@@ -26,7 +26,7 @@ public class ModBlocks {
 
     public static final Block BLOCKFISH = registerBlock("blockfish", new BlockfishBlock(
             FabricBlockSettings.copyOf(Blocks.COBBLESTONE)
-                    .hardness(0)
+                    .hardness(0.1f)
                     .sounds(BlockSoundGroup.SLIME)
                     .mapColor(DyeColor.PINK)
     ));

@@ -2,14 +2,14 @@
 	"schemaVersion": 1,
 	"id": "blockfish",
 	"version": "${version}",
-	"name": "blockfish",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"name": "Blockfish",
+	"description": "Amazing blockfish",
 	"authors": [
 		"TreeRodent"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://github.com/TreeRodent/blockfish-1.20.X",
+		"sources": "https://github.com/TreeRodent/blockfish-1.20.X"
 	},
 	"license": "MIT",
 	"icon": "assets/blockfish/icon.png",

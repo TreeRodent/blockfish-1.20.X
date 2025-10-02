@@ -1,4 +1,4 @@
-package net.treerodent.blockfish.registry;
+package net.treerodent.blockfish.block;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;

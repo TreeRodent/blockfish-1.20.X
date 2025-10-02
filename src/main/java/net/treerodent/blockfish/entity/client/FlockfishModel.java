@@ -4,11 +4,7 @@ import net.minecraft.client.model.*;
 import net.minecraft.client.render.VertexConsumer;
 import net.minecraft.client.render.entity.model.SinglePartEntityModel;
 import net.minecraft.client.util.math.MatrixStack;
-import net.minecraft.entity.Entity;
-import net.minecraft.entity.passive.SchoolingFishEntity;
-import net.minecraft.util.math.RotationAxis;
-import net.treerodent.blockfish.entity.ModEntities;
-import net.treerodent.blockfish.entity.animation.ModAnimations;
+import net.treerodent.blockfish.entity.animation.FlockfishAnimations;
 import net.treerodent.blockfish.entity.custom.FlockfishEntity;
 
 // Made with Blockbench 4.12.5
@@ -43,8 +39,8 @@ public class FlockfishModel<T extends FlockfishEntity> extends SinglePartEntityM
 	public void setAngles(FlockfishEntity entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 	    this.getPart().traverse().forEach(ModelPart::resetTransform);
 
-        this.updateAnimation(entity.flopAnimationState, ModAnimations.FLOP, ageInTicks, 1f);
-        this.updateAnimation(entity.idleAnimationState, ModAnimations.IDLE, ageInTicks, 1f);
+        this.updateAnimation(entity.flopAnimationState, FlockfishAnimations.FLOP, ageInTicks, 1f);
+        this.updateAnimation(entity.idleAnimationState, FlockfishAnimations.IDLE, ageInTicks, 1f);
     }
 
     @Override
