@@ -40,9 +40,10 @@ public class BlockfishBlock extends FallingBlock {
     }
 
     @Override
-    public DamageSource getDamageSource(Entity attacker) {
-        return attacker.getDamageSources().fallingAnvil(attacker);
+    protected void configureFallingBlockEntity(FallingBlockEntity entity) {
+        entity.setHurtEntities(1.0F, 20);
     }
+
 
     @Override
     public void onLanding(World world, BlockPos pos, BlockState fallingBlockState, BlockState currentStateInPos, FallingBlockEntity fallingBlockEntity) {

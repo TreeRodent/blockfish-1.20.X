@@ -17,5 +17,6 @@ public class BlockfishDataGenerator implements DataGeneratorEntrypoint {
         pack.addProvider(ModLootTableProvider::new);
 
 
+
 	}
 }
