@@ -15,19 +15,11 @@ import net.treerodent.blockfish.block.BlockfishBlock;
 
 public class ModBlocks {
 
-//    public static final Block BLOCKFISH = registerBlock("blockfish",
-//            new FallingBlock(FabricBlockSettings.create()
-//                    .mapColor(MapColor.PINK)
-//                    .strength(0.1F, 0.6F)
-//                    .sounds(BlockSoundGroup.SLIME)
-//                    .nonOpaque()
-//            ));
-
     public static final Block BLOCKFISH = registerBlock("blockfish", new BlockfishBlock(
             AbstractBlock.Settings.create()
                     .hardness(0.0f)
                     .sounds(BlockSoundGroup.SLIME)
-                    .mapColor(DyeColor.PINK)
+                    .mapColor(MapColor.PINK)
     ));
 
     private static Block registerBlock(String name, Block block) {

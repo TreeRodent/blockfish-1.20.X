@@ -6,7 +6,9 @@ import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRe
 import net.treerodent.blockfish.entity.ModEntities;
 import net.treerodent.blockfish.entity.custom.FlockfishEntity;
 import net.treerodent.blockfish.registry.ModBlocks;
+import net.treerodent.blockfish.registry.ModItemGroups;
 import net.treerodent.blockfish.registry.ModItems;
+import net.treerodent.blockfish.registry.ModEntitySpawns;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -20,7 +22,10 @@ public class Blockfish implements ModInitializer {
 
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
+        ModItemGroups.registerItemGroups();
         ModEntities.registerModEntities();
+        ModEntitySpawns.addSpawns();
+
 
         FabricDefaultAttributeRegistry.register(ModEntities.FLOCKFISH, FlockfishEntity.createFlockfishAttributes());
 

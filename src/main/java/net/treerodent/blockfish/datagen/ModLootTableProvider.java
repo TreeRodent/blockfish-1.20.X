@@ -2,6 +2,7 @@ package net.treerodent.blockfish.datagen;
 
 import net.fabricmc.fabric.api.datagen.v1.FabricDataOutput;
 import net.fabricmc.fabric.api.datagen.v1.provider.FabricBlockLootTableProvider;
+import net.treerodent.blockfish.entity.ModEntities;
 import net.treerodent.blockfish.registry.ModBlocks;
 
 public class ModLootTableProvider extends FabricBlockLootTableProvider {
@@ -12,5 +13,6 @@ public class ModLootTableProvider extends FabricBlockLootTableProvider {
     @Override
     public void generate() {
         addDrop(ModBlocks.BLOCKFISH);
+
     }
 }

@@ -2,8 +2,6 @@ package net.treerodent.blockfish;
 
 import net.fabricmc.fabric.api.datagen.v1.DataGeneratorEntrypoint;
 import net.fabricmc.fabric.api.datagen.v1.FabricDataGenerator;
-import net.treerodent.blockfish.datagen.ModBlockTagProvider;
-import net.treerodent.blockfish.datagen.ModItemTagProvider;
 import net.treerodent.blockfish.datagen.ModLootTableProvider;
 import net.treerodent.blockfish.datagen.ModModelProvider;
 

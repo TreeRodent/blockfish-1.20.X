@@ -1,0 +1,10 @@
+{
+  "values": [
+    "c:cooked_fish",
+    "c:cookedfish",
+    "c:foods",
+    "c:foods/cooked_fish",
+    "c:foods/cooked_fishes",
+    "c:foods/cooked_meats"
+  ]
+}

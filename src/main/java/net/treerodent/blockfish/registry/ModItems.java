@@ -3,6 +3,7 @@ package net.treerodent.blockfish.registry;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
+import net.fabricmc.fabric.impl.itemgroup.FabricItemGroup;
 import net.minecraft.entity.EntityType;
 import net.minecraft.fluid.Fluids;
 import net.minecraft.item.*;
@@ -41,7 +42,6 @@ public class ModItems {
             "flockfish_spawn_egg",
             new SpawnEggItem(ModEntities.FLOCKFISH, 0xf492c4, 0xf9b4d7, new FabricItemSettings())
     );
-
 
 
     private static void addItemsToToolsTab(FabricItemGroupEntries entries ) {
