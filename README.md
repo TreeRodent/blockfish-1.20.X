@@ -1,6 +1,6 @@
 ![Banner](https://cdn.modrinth.com/data/cached_images/9a290ceab097d3155c7c0e3ef38474eb46d4c621.png)
 # Blockfish
-This mod adds a new creature called the flockfish. The flockfish spawns in both the ocean and warm ocean biomes.
+This mod adds a new creature called the flockfish. The flockfish spawns in both the lukewarm ocean and warm ocean biomes.
 
 ## Behavior
 The flockfish will spawn in groups of 2-6 and will behave like any other fish.
