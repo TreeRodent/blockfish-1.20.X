@@ -8,13 +8,9 @@ import net.treerodent.blockfish.datagen.ModModelProvider;
 public class BlockfishDataGenerator implements DataGeneratorEntrypoint {
 	@Override
 	public void onInitializeDataGenerator(FabricDataGenerator fabricDataGenerator) {
-
         FabricDataGenerator.Pack pack = fabricDataGenerator.createPack();
 
         pack.addProvider(ModModelProvider::new);
         pack.addProvider(ModLootTableProvider::new);
-
-
-
 	}
 }

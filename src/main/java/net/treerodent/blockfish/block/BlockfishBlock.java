@@ -14,7 +14,6 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.world.World;
 
 public class BlockfishBlock extends FallingBlock {
-
     public static final DirectionProperty FACING = Properties.HORIZONTAL_FACING;
 
     public BlockfishBlock(Settings settings) {
@@ -42,10 +41,8 @@ public class BlockfishBlock extends FallingBlock {
         entity.setHurtEntities(1.0F, 20);
     }
 
-
     @Override
     public void onLanding(World world, BlockPos pos, BlockState fallingBlockState, BlockState currentStateInPos, FallingBlockEntity fallingBlockEntity) {
         super.onLanding(world, pos, fallingBlockState, currentStateInPos, fallingBlockEntity);
-
     }
 }

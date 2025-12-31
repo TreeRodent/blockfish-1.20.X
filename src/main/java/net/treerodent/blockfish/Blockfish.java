@@ -19,15 +19,12 @@ public class Blockfish implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-
 		ModItems.registerModItems();
 		ModBlocks.registerModBlocks();
         ModItemGroups.registerItemGroups();
         ModEntities.registerModEntities();
         ModEntitySpawns.addSpawns();
 
-
         FabricDefaultAttributeRegistry.register(ModEntities.FLOCKFISH, FlockfishEntity.createFlockfishAttributes());
-
 	}
 }

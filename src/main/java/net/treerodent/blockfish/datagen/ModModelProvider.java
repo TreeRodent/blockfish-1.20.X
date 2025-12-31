@@ -26,7 +26,6 @@ public class ModModelProvider extends FabricModelProvider {
         itemModelGenerator.register(ModItems.RAW_FLOCKFISH, Models.GENERATED);
         itemModelGenerator.register(ModItems.COOKED_FLOCKFISH, Models.GENERATED);
         itemModelGenerator.register(ModItems.FLOCKFISH_BUCKET, Models.GENERATED);
-
         itemModelGenerator.register(ModItems.FLOCKFISH_SPAWN_EGG,
                 new Model(Optional.of(new Identifier("item/template_spawn_egg")), Optional.empty()));
     }
