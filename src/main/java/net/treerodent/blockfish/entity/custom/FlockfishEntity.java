@@ -44,7 +44,6 @@ public class FlockfishEntity extends SchoolingFishEntity {
                 this.flopAnimationTimeout--;
             }
         } else {
-
             if (this.idleAnimationTimeout <= 0) {
                 this.idleAnimationTimeout = this.random.nextInt(40) + 80;
                 this.idleAnimationState.start(this.age);
@@ -53,7 +52,6 @@ public class FlockfishEntity extends SchoolingFishEntity {
             }
         }
     }
-
 
     @Override
     public void tick() {
@@ -93,8 +91,6 @@ public class FlockfishEntity extends SchoolingFishEntity {
         return SoundEvents.ENTITY_COD_FLOP;
     }
 
-    public SoundEvent getBurpSound() { return SoundEvents.ENTITY_PLAYER_BURP; }
-
     public boolean isFlopping() {
         return !this.isTouchingWater(); // && this.isOnGround()
     }
@@ -102,8 +98,6 @@ public class FlockfishEntity extends SchoolingFishEntity {
     public ActionResult interactAt(PlayerEntity player, Vec3d hitPos, Hand hand) {
         ItemStack itemStack = player.getStackInHand(hand);
         if (itemStack.getItem() == Items.CAKE) {
-
-
             if (!player.getAbilities().creativeMode) {
                 itemStack.decrement(1);
             }
@@ -114,7 +108,6 @@ public class FlockfishEntity extends SchoolingFishEntity {
             this.playSound(SoundEvents.ENTITY_GENERIC_EAT, 1.0f, 1.0f);
 
             if (!world.isClient) {
-
                 for (int i = 0; i < 10; i++) {
                     this.getWorld().addParticle(ParticleTypes.CLOUD,
                             this.getX() + (this.random.nextDouble() - 0.5),
@@ -122,18 +115,14 @@ public class FlockfishEntity extends SchoolingFishEntity {
                             this.getZ() + (this.random.nextDouble() - 0.5),
                             0, 0, 0);
                 }
-
                 world.setBlockState(blockPos, ModBlocks.BLOCKFISH.getDefaultState());
                 this.discard();
             }
-
         }
-
         return super.interactAt(player, hitPos, hand);
     }
 
     protected void initGoals() {
-
         this.goalSelector.add(1, new SwimAroundGoal(this, 3, 10));
         this.goalSelector.add(2, new EscapeDangerGoal(this, 1.25));
         this.goalSelector.add(3, new LookAroundGoal(this));
@@ -145,5 +134,4 @@ public class FlockfishEntity extends SchoolingFishEntity {
         return MobEntity.createMobAttributes()
                 .add(EntityAttributes.GENERIC_MAX_HEALTH, 3);
     }
-
 }

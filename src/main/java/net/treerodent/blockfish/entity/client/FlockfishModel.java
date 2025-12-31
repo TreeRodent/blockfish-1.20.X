@@ -49,14 +49,9 @@ public class FlockfishModel<T extends FlockfishEntity> extends SinglePartEntityM
 
 	}
 
-
-
-
-
     @Override
     public ModelPart getPart() {
         return flockfish;
     }
-
 
 }

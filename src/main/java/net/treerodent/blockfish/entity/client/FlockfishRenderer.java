@@ -27,13 +27,11 @@ public class FlockfishRenderer extends MobEntityRenderer<FlockfishEntity, Flockf
         if(entity.isFlopping()) {
             matrices.multiply(RotationAxis.POSITIVE_Z.rotationDegrees(90f));
         }
-
     }
 
     @Override
     public void render(FlockfishEntity mobEntity, float f, float g, MatrixStack matrixStack,
                        VertexConsumerProvider vertexConsumerProvider, int i) {
-
 
         if(mobEntity.isBaby()) {
             matrixStack.scale(0.5f, 0.5f, 0.5f);
@@ -42,6 +40,5 @@ public class FlockfishRenderer extends MobEntityRenderer<FlockfishEntity, Flockf
         }
 
         super.render(mobEntity, f, g, matrixStack, vertexConsumerProvider, i);
-
     }
 }
