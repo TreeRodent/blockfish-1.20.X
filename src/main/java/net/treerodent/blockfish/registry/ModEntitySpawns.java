@@ -7,7 +7,6 @@ import net.minecraft.entity.SpawnRestriction;
 import net.minecraft.entity.passive.SchoolingFishEntity;
 import net.minecraft.world.Heightmap;
 import net.minecraft.world.biome.BiomeKeys;
-import net.treerodent.blockfish.entity.ModEntities;
 
 public class ModEntitySpawns {
     public static void addSpawns() {

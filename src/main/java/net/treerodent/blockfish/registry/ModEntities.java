@@ -1,4 +1,4 @@
-package net.treerodent.blockfish.entity;
+package net.treerodent.blockfish.registry;
 
 import net.fabricmc.fabric.api.object.builder.v1.entity.FabricEntityTypeBuilder;
 import net.minecraft.entity.EntityDimensions;

@@ -5,7 +5,7 @@ import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
 import net.minecraft.client.render.RenderLayer;
-import net.treerodent.blockfish.entity.ModEntities;
+import net.treerodent.blockfish.registry.ModEntities;
 import net.treerodent.blockfish.entity.client.FlockfishModel;
 import net.treerodent.blockfish.entity.client.FlockfishRenderer;
 import net.treerodent.blockfish.entity.client.ModModelLayers;
