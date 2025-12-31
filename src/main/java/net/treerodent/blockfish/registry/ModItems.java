@@ -40,7 +40,6 @@ public class ModItems {
             new SpawnEggItem(ModEntities.FLOCKFISH, 0xf492c4, 0xf9b4d7, new FabricItemSettings())
     );
 
-
     private static void addItemsToToolsTab(FabricItemGroupEntries entries ) {
         entries.add(FLOCKFISH_BUCKET);
     }
@@ -65,9 +64,18 @@ public class ModItems {
     public static void registerModItems() {
         Blockfish.LOGGER.info("Registering mod items for " + Blockfish.MOD_ID);
 
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(ModItems::addItemsToToolsTab);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(ModItems::addItemsToFoodAndDrinkTab);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(ModItems::addItemsToFunctionalBlocksTab);
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(ModItems::addItemsToSpawnEggsTab);
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(content -> {
+            content.addAfter(Items.SALMON_BUCKET, FLOCKFISH_BUCKET);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(content -> {
+            content.addAfter(Items.COOKED_SALMON, RAW_FLOCKFISH);
+            content.addAfter(RAW_FLOCKFISH, COOKED_FLOCKFISH);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.FUNCTIONAL).register(content -> {
+            content.addAfter(Items.CONDUIT, ModBlocks.BLOCKFISH);
+        });
+        ItemGroupEvents.modifyEntriesEvent(ItemGroups.SPAWN_EGGS).register(content -> {
+            content.addAfter(Items.SALMON_SPAWN_EGG, FLOCKFISH_SPAWN_EGG);
+        });
     }
 }

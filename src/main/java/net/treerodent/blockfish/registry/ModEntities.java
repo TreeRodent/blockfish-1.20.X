@@ -18,9 +18,6 @@ public class ModEntities {
                     .dimensions(EntityDimensions.fixed(1f, 0.3f)).build());
 
     public static void registerModEntities() {
-
         Blockfish.LOGGER.info("Registering Entities for " + Blockfish.MOD_ID);
-
     }
-
 }
